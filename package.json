@@ -1,9 +1,9 @@
 {
-  "name": "gestman-permisssion",
+  "name": "gestman-gestures",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=prod nodemon app.js"
+    "g-start": "cross-env NODE_ENV=prod nodemon app.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -14,6 +14,9 @@
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.4.21",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "uuid": "^3.3.2"
   }
 }

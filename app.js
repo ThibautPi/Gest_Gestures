@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost/APIPermission', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/APIPGestures', {useNewUrlParser: true});
 
 const app = express();
 
@@ -15,7 +15,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 // Routes
-app.use('/gestures',require('./routes/gestures'));
+app.use('/sets',require('./routes/set'));
+app.use('/classes',require('./routes/classes'));
+app.use('/samples',require('./routes/samples'));
 
 // Start the server
 const port = process.env.PORT || 5002;
