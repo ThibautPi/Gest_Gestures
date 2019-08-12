@@ -4,7 +4,7 @@ const G_class = require('../models/classes');
 
 module.exports = {
     getAll: async function(req,res,next){
-        const sets = await G_Set.find({});
+        const sets = await G_Set.find({user_id : req.user});
         res.status(200).json(sets);
     },
     get: async function(req,res,next){
@@ -20,9 +20,11 @@ module.exports = {
     },
     post: async function(req,res,next){
         const { name, description } = req.value.body;
+        const user_id = req.user;
         const newG_Set = new G_Set({
             name: name,
-            description: description
+            description: description,
+            user_id : user_id
         });
 
         await newG_Set.save();

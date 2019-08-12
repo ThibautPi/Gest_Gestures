@@ -17,7 +17,11 @@ const setSchema = new Schema({
     },
     gesture_classes_id:[
         {type: String}
-    ]
+    ],
+    user_id:{
+        type: String,
+        required: true
+    }
 },
 {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at'}

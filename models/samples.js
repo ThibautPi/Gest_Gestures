@@ -24,7 +24,7 @@ const sampleSchema = new Schema({
     },
     sample_type:{
         type: String,
-        enum: ['0D','1D','2D','3D','4D']
+        enum: ['0D','1D','2D','2D1/2','3D','4D']
     },
     properties:[
         {
