@@ -19,6 +19,7 @@ module.exports = {
       res.status(200).json(g_classes)
     },
     post: async function(req,res,next){
+        console.log("Creating gesture set")
         const { name, description } = req.value.body;
         const user_id = req.user;
         const newG_Set = new G_Set({
